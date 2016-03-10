@@ -1,0 +1,6 @@
+markdown: kramdown
+permalink: /:year/:month/:title
+title: /var/log/uberspot
+url: https://uberspot.github.io
+subscribe: https://uberspot.github.io/rss.xml
+exclude: [ README.md ]

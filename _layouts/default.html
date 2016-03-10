@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+<title>{% if page.title != 'Home' %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+<meta name="description" content="{{ page.description }}" />
+<meta name="keywords" content="{{ page.categories | join: ',' }},{{ page.keywords | join: ',' }}" />
+<meta name="author" content="Uberspot" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="/resources/favicon.png" />
+<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="{{ site.subscribe }}" />
+<link rel="stylesheet" type="text/css" href="/css/main.css" />
+</head>
+<body>
+<header>
+<h1><a href="/">{{ site.title }}</a></h1>
+<nav>
+<a href="/blog.html" title="Read my blog">blog</a> &bull;
+<a href="https://www.linkedin.com/in/uberspot" title="Linkedin" rel="noreferrer">linkedin</a> &bull;
+<a href="https://github.com/uberspot" title="github.com/uberspot" rel="noreferrer">github</a> &bull;
+<a href="https://www.google.com/recaptcha/mailhide/d?k=01EW0-_ETsXEZ9iXcIexkFfQ==&c=VTROcA8OU1Z_CFcgvz_9r9B78wVcPb2imtW47gqbt7o=" title="email" rel="noreferrer">email</a> &bull;
+<a id="subscribe-link" href="{{ site.subscribe }}" title="RSS feed" rel="noreferrer">rss</a>
+</nav>
+</header>
+<div id="main">
+{{ content }}
+</div>
+<footer>
+<p>Copyright &copy; 2011-{{ 'now' | date: '%Y' }} Uberspot. Some rights reserved.</p>
+<p><a id="cc-logo" title="Creative Commons License" rel="license" href="https://creativecommons.org/licenses/by-nc-sa/3.0/"></a>
+Except where otherwise <a href="https://github.com/uberspot/uberspot.github.com#readme">noted</a>, content on this site is licensed under a<br />
+<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>.</p>
+</footer>
+<script type="text/javascript" src="/js/main.js"></script>
+</body>
+</html>

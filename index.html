@@ -1,0 +1,15 @@
+---
+layout: default
+title: Home
+description: This is a blog! - said Captain Obvious.
+---
+<h2>Recent blog posts</h2>
+
+<ul class="post-list">
+{% for post in site.posts limit: 8 %}
+<li><time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%b %d %Y' }}</time>
+<a href="{{ post.url }}">{{ post.title }}</a></li>
+{% endfor %}
+</ul>
+
+<p>&rarr; <a href="/blog.html">Browse all {{ site.posts | size }} posts</a></p>
